@@ -18,7 +18,12 @@
 					autoplay: "autoplay",
 				});
 			});
-		})
+			
+			$("a[name=cartInsert]").click(function() {
+				localStorage.setItem($(this).attr("id"), $(this).attr("data-info"));
+			});
+		});
+		
 	</script>
 </head>
 <body>
@@ -80,6 +85,7 @@
 		    <h5 class="card-title">슈퍼맨 리턴즈</h5>
 		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 		    <a href="#" class="btn btn-danger" data-media-src="media/returns.mp4" name="vplay">미리보기</a>
+		    <a href="#" class="btn btn-danger" data-info="슈퍼맨 리턴즈,returns.jpg,15000" id="1001" name="cartInsert">담기</a>
 		  </div>
 		</div>
 	  </div>
@@ -90,6 +96,7 @@
 		    <h5 class="card-title">캡틴마블</h5>
 		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 		    <a href="#" class="btn btn-danger" data-media-src="media/captain.mp4" name="vplay">미리보기</a>
+		    <a href="#" class="btn btn-danger" data-info="캡틴마블,captain.jpg,18000" id="1002" name="cartInsert">담기</a>
 		  </div>
 		</div>
 	  </div>
@@ -100,6 +107,7 @@
 		    <h5 class="card-title">배트맨</h5>
 		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 		    <a href="#" class="btn btn-danger" data-media-src="media/batman.mp4" name="vplay">미리보기</a>
+		    <a href="#" class="btn btn-danger" data-info="배트맨,batman.jpg,12500" id="1003" name="cartInsert">담기</a>
 		  </div>
 		</div>
 	  </div>
@@ -110,6 +118,7 @@
 		    <h5 class="card-title">마징가</h5>
 		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 		    <a href="#" class="btn btn-danger" data-media-src="media/mazingga.mp4" name="vplay">미리보기</a>
+		    <a href="#" class="btn btn-danger" data-info="마징가,mazingga.jpg,17000" id="1004" name="cartInsert">담기</a>
 		  </div>
 		</div>
 	  </div>
