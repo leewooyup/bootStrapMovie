@@ -9,6 +9,17 @@
 			height: 300px;
 		}
 	</style>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("a[name='vplay']").click(function() {
+				$("#video").attr({
+					src: $(this).attr("data-media-src"),
+					autoplay: "autoplay",
+				});
+			});
+		})
+	</script>
 </head>
 <body>
 <div class="container-fluid d-flex flex-column text-center" style="min-height: 100vh;">
@@ -68,7 +79,7 @@
 		  <div class="card-body">
 		    <h5 class="card-title">슈퍼맨 리턴즈</h5>
 		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-		    <a href="#" class="btn btn-primary">Go somewhere</a>
+		    <a href="#" class="btn btn-danger" data-media-src="media/returns.mp4" name="vplay">미리보기</a>
 		  </div>
 		</div>
 	  </div>
@@ -78,7 +89,7 @@
 		  <div class="card-body">
 		    <h5 class="card-title">캡틴마블</h5>
 		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-		    <a href="#" class="btn btn-primary">Go somewhere</a>
+		    <a href="#" class="btn btn-danger" data-media-src="media/captain.mp4" name="vplay">미리보기</a>
 		  </div>
 		</div>
 	  </div>
@@ -88,7 +99,7 @@
 		  <div class="card-body">
 		    <h5 class="card-title">배트맨</h5>
 		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-		    <a href="#" class="btn btn-primary">Go somewhere</a>
+		    <a href="#" class="btn btn-danger" data-media-src="media/batman.mp4" name="vplay">미리보기</a>
 		  </div>
 		</div>
 	  </div>
@@ -98,7 +109,7 @@
 		  <div class="card-body">
 		    <h5 class="card-title">마징가</h5>
 		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-		    <a href="#" class="btn btn-primary">Go somewhere</a>
+		    <a href="#" class="btn btn-danger" data-media-src="media/mazingga.mp4" name="vplay">미리보기</a>
 		  </div>
 		</div>
 	  </div>
