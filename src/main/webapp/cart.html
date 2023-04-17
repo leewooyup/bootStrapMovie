@@ -25,11 +25,11 @@
 					priceSum += parseInt(v[2]);
 					
 					str += `<tr>`;
-					str += `<td><img src='img/${v[1]}' alt='' class="poster"></td>`;
-					str += `<td>${key}</td>`;
-					str += `<td>${v[0]}</td>`;
-					str += `<td>${v[2]}</td>`;
-					str += `<td><button type='button'>삭제</button></td>`;
+					str += `<td class='align-middle'><img src='img/${v[1]}' alt='' class="poster"></td>`;
+					str += `<td class='align-middle'>${key}</td>`;
+					str += `<td class='align-middle'>${v[0]}</td>`;
+					str += `<td class='align-middle'>${v[2]}</td>`;
+					str += `<td class='align-middle'><button type='button' class="btn btn-danger" name='remove' data-removeInfo='${key}'>삭제</button></td>`;
 					str += `</tr>`;
 				}
 				
@@ -39,6 +39,14 @@
 			}
 			
 			getInfo();
+			
+			// 동적으로 생성된 element에 이벤트를 등록할 때, on을 쓴다
+			$(document).on("click", "[name=remove]", function(){
+				if(confirm("정말 삭제하시겠습니까?")) {
+					localStorage.removeItem($(this).attr("data-removeInfo"));
+					getInfo();	
+				}
+			});
 		});// ready End
 	</script>
 </head>
@@ -80,7 +88,9 @@
 	   -->  
 	  </tbody>
 	  <tfoot>
-	   	<th colspan="5" class="table-dark" id="summary"></th>
+	  	<tr>
+	   		<th colspan="5" class="table-dark" id="summary"></th>
+	   	</tr>
 	  </tfoot>
 	</table>
 
